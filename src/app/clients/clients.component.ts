@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { student } from '../student';
 
 @Component({
   selector: 'app-clients',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ClientsComponent {
 
+  students: student[] = [
+    {id: 1, name: 'Julio', course: "ADS"},
+    {id: 2, name: 'Amanda', course: "Mecatrônica"},
+    {id: 3, name: 'Luca', course: "GTI"}
+  ];
 }
