@@ -20,4 +20,8 @@ export class ClientsComponent {
       course : ['']
     });
   }
+
+  save(){
+    this.students.push(this.formGroupStudent.value);
+  }
 }

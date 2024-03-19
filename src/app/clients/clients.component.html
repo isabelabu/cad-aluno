@@ -14,13 +14,23 @@
         </div>
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome" formControlName="name" />
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            formControlName="name"
+          />
         </div>
         <div class="mb-3">
           <label for="curso" class="form-label">Curso</label>
-          <input type="text" class="form-control" id="curso" formControlName="course" />
+          <input
+            type="text"
+            class="form-control"
+            id="curso"
+            formControlName="course"
+          />
         </div>
-        <button type="salvar" class="btn btn-success" >Salvar</button>
+        <button type="salvar" class="btn btn-success" (click)="save()">Salvar</button>
       </form>
       <table class="table mt-5 table-striped">
         <thead>
@@ -32,9 +42,9 @@
         </thead>
         <tbody>
           <tr *ngFor="let student of students">
-            <th scope="row">{{student.id}}</th>
-            <td>{{student.name}}</td>
-            <td>{{student.course}}</td>
+            <th scope="row">{{ student.id }}</th>
+            <td>{{ student.name }}</td>
+            <td>{{ student.course }}</td>
           </tr>
         </tbody>
       </table>
