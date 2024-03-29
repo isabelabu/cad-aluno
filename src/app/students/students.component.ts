@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { student } from '../student';
+import { Student } from '../student';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-students',
@@ -8,11 +9,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './students.component.css'
 })
 export class StudentsComponent {
-  students: student[] = [];
+  students: Student[] = [];
 
   formGroupStudent : FormGroup;
 
-  constructor(private formBuilder : FormBuilder){
+  constructor(private formBuilder : FormBuilder, private service: StudentService){
     this.formGroupStudent = formBuilder.group({
       id : [''],
       name : [''],
