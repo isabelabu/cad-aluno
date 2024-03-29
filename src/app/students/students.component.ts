@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { StudentService } from '../student.service';
@@ -8,7 +8,7 @@ import { StudentService } from '../student.service';
   templateUrl: './students.component.html',
   styleUrl: './students.component.css'
 })
-export class StudentsComponent {
+export class StudentsComponent implements OnInit{
   students: Student[] = [];
 
   formGroupStudent : FormGroup;
@@ -18,6 +18,15 @@ export class StudentsComponent {
       id : [''],
       name : [''],
       course : ['']
+    });
+  }
+  ngOnInit(): void {
+    this.loadStudents();
+  }
+
+  loadStudents(){
+    this.service.getStudents().subscribe({
+      next: data => this.students = data
     });
   }
 
