@@ -36,4 +36,10 @@ export class StudentsComponent implements OnInit{
     });
 
   }
+
+  delete(student:Student){
+    this.service.delete(student).subscribe({
+      next: () => this.loadStudents()
+    });
+  }
 }
