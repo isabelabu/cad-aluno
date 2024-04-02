@@ -1,24 +1,29 @@
 {
   "students": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Belabu",
       "course": "ADS"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Isa",
       "course": "ADS"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Isabela",
       "course": "ADS"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "teste",
       "course": "teste"
+    },
+    {
+      "id": 5,
+      "name": "teste2",
+      "course": "teste2"
     }
   ]
 }
