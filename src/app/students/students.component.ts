@@ -45,6 +45,7 @@ export class StudentsComponent implements OnInit{
         next: data => this.students.push(data)
       });
     }
+    this.formGroupStudent.reset();
 
   }
 
