@@ -11,10 +11,10 @@
             id="nome"
             formControlName="name"
           />
-          <small *ngIf="submited && name.hasError('minlength')" class="text-danger">
+          <small *ngIf="name.touched && name.hasError('minlength')" class="text-danger">
             * O nome precisa ter no mínimo 3 caracteres
           </small>
-          <small *ngIf="submited && name.hasError('required')" class="text-danger">
+          <small *ngIf="name.touched && name.hasError('required')" class="text-danger">
             * O campo é obrigatório
           </small>
         </div>
@@ -26,11 +26,11 @@
             id="curso"
             formControlName="course"
           />
-          <small *ngIf="submited && course.hasError('required')" class="text-danger">
+          <small *ngIf="course.touched && course.hasError('required')" class="text-danger">
             * O campo é obrigatório
           </small>
         </div>
-        <button type="salvar" class="btn btn-success" (click)="save()">Salvar</button>
+        <button type="submit" [disabled]="!formGroupStudent.valid" class="btn btn-success" (click)="save()">Salvar</button>
       </form>
       <h3 class="mt-4 text-center">Alunos</h3>
       <table class="table mt-5 table-striped">
